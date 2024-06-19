@@ -1,11 +1,15 @@
 package com.vanshika.customdialogapp
 
+import android.app.ActionBar
 import android.app.Dialog
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 class MainActivity : AppCompatActivity() {
     var fab : FloatingActionButton ?= null
@@ -27,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                         etName?.error = resources.getString(R.string.enter_your_name)
                     } else {
                         name?.setText(etName?.text?.toString())
+                        window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
                         this.dismiss()
                     }
                 }
