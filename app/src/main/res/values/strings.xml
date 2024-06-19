@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CustomDialogApp</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+</resources>
