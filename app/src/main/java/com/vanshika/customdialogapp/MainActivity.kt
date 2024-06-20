@@ -3,6 +3,7 @@ package com.vanshika.customdialogapp
 import android.app.ActionBar
 import android.app.Dialog
 import android.os.Bundle
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
@@ -26,12 +27,12 @@ class MainActivity : AppCompatActivity() {
                 val etName = this.findViewById<EditText>(R.id.etEnterYourText)
                 val btnSubmit: Button = this.findViewById(R.id.btSubmit)
                 val btnCancel: Button = this.findViewById(R.id.btCancel)
+                getWindow()?.setLayout(MATCH_PARENT,MATCH_PARENT)
                 btnSubmit.setOnClickListener {
                     if (etName?.text?.toString().isNullOrEmpty()) {
                         etName?.error = resources.getString(R.string.enter_your_name)
                     } else {
                         name?.setText(etName?.text?.toString())
-                        window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
                         this.dismiss()
                     }
                 }
